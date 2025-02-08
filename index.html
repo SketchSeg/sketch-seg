@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Instance Segmentation of Scene Sketches Using Natural Image Priors.">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Instance Segmentation of Scene Sketches Using Natural Image Priors</title>>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [['$','$'], ['\\(','\\)']],
+            displayMath: [['$$','$$'], ['\\[','\\]']],
+            processEscapes: true
+        }
+    });
+</script>
+</head>
+
+<body>
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Instance Segmentation of Scene Sketches <br /> Using Natural Image Priors</h1>
+
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"> Anonymous Authors </span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <!-- <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2412.03889" class="external-link button is-normal is-rounded" target="_blank">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span> -->
+                <span class="link-block">
+                  <a href="" class="external-link button is-normal is-rounded is-light">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv (Coming Soon)</span>
+                  </a>
+                </span>
+
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="" class="external-link button is-normal is-rounded is-light">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code (Coming Soon)</span>
+                  </a>
+                </span>
+
+                <!-- Video Link. -->
+                <!-- <span class="link-block">
+                  <a href="" class="external-link button is-normal is-rounded is-light">
+                    <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video (Coming Soon)</span>
+                  </a>
+                </span> -->
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop place-items-center">
+      <div class="hero-body place-items-center">
+        <img src="./static/images/sketchseg_teaser_sm.png" alt="Banner Image" width="100%">
+        <h2 class="subtitle has-text-centered mt-4">
+          <span class="dnerf">SketchSeg</span> performs instance segmentation of raster sketches. It effectively handles diverse types of sketches, accommodating variations in stroke style and complexity.
+        </h2>
+      </div>
+    </div>
+  </section>
+  <!-- Tmp. -->
+  <!-- <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Site under construction.</h2>
+        </div>
+      </div>
+  </section> -->
+  <!--/ Tmp. -->
+
+
+  <!-- Abstract. -->
+  <section class="section is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Sketch segmentation involves grouping pixels within a sketch that belong to the same object or instance. It serves as a valuable tool for sketch editing tasks, such as moving, scaling, or removing specific components. While image segmentation models have demonstrated remarkable capabilities in recent years, sketches present unique challenges for these models due to their sparse nature and wide variation in styles.
+              We introduce SketchSeg, a method for instance segmentation of raster scene sketches. Our approach adapts state-of-the-art image segmentation and object detection models to the sketch domain by employing class-agnostic fine-tuning and refining segmentation masks using depth cues. Furthermore, our method organizes sketches into sorted layers, where occluded instances are inpainted, enabling advanced sketch editing applications.
+              As existing datasets in this domain lack variation in sketch styles, we construct a synthetic scene sketch segmentation dataset featuring sketches with diverse brush strokes and varying levels of detail. We use this dataset to demonstrate the robustness of our approach and will release it to promote further research in the field.
+            </p>
+          </div>
+        </div>
+      </div>
+  </section>
+  <!--/ Abstract. -->
+
+
+  <!-- Acknowledgement -->
+  <!-- <section class="section is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Acknowledgements </h2>
+          <div class="content has-text-justified mt-4">
+          </div>
+        </div>
+      </div>
+  </section> -->
+  <!-- Acknowledgement -->
+  <!-- 
+  <section class="section" id="BibTeX">
+    <div class="container is-four-fifths content">
+      <div class="text-center">
+        <h2 class="title">BibTeX</h2>
+      </div>
+      <pre><code>
+        @misc{
+      }
+  </code></pre>
+    </div>
+  </section> -->
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+            <p>
+              Website source code based on the <a href="https://nerfies.github.io/">Nerfies</a> project page. If you want to reuse their <a href="https://github.com/nerfies/nerfies.github.io">source code</a>, please credit them appropriately.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
