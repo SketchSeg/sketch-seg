@@ -65,7 +65,7 @@
               <div class="publication-links">
                 <!-- PDF Link. -->
                 <span class="link-block">
-                  <a href="./static/anonymous_paper.pdf" class="external-link button is-normal is-rounded" target="_blank">
+                  <a href="./static/anonymous_paper_INKi.pdf" class="external-link button is-normal is-rounded" target="_blank">
                     <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                     </span>
@@ -127,7 +127,7 @@
       <div class="hero-body place-items-center">
         <img src="./static/images/sketchseg_teaser_sm.png" alt="Banner Image" width="100%">
         <h2 class="subtitle has-text-centered mt-4">
-          <span class="dnerf">SketchSeg</span> performs instance segmentation of raster sketches. <br /> It effectively handles diverse types of sketches, accommodating variations in stroke style and complexity.
+          <span class="dnerf">INKi</span> performs instance segmentation of raster sketches. <br /> It effectively handles diverse types of sketches, accommodating variations in stroke style and complexity.
         </h2>
       </div>
     </div>
@@ -162,7 +162,7 @@
             </p>
           </div>
         </div>
-        <img src="./static/images/motivation_comics.png" alt="Banner Image" width="100%">
+        <img src="./static/images/INKi_motivation.png" alt="Banner Image" width="100%">
 
       </div>
     </div>
@@ -174,7 +174,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-3">What does <span class="dnerf">SketchSeg</span> enable?</h2>
+          <h2 class="title is-3">What does <span class="dnerf">INKi</span> enable?</h2>
           <video poster="" id="meerkat" autoplay controls muted loop height="100%">
             <source src="./static/videos/meerkat_demo_no_audio.mp4" type="video/mp4">
           </video>
@@ -182,7 +182,7 @@
             <source src="./static/videos/toy_room_demo_no_audio.mp4" type="video/mp4">
           </video>
           <div class="content has-text-justified mt-4">
-            <p> <b> Interactive interface for sketch editing. </b><span class="dnerf">SketchSeg</span>'s segmentation and layering technique makes sketch editing effortless. With our interactive interface, users can upload a sketch, which is automatically segmented into ordered layers. This allows artists to easily move, copy, or delete objects without needing to manually redraw affected areas—streamlining the editing process and giving more control over their compositions..
+            <p> <b> Interactive interface for sketch editing. </b><span class="dnerf">INKi</span>'s segmentation and layering technique makes sketch editing effortless. With our interactive interface, users can upload a sketch, which is automatically segmented into ordered layers. This allows artists to easily move, copy, or delete objects without needing to manually redraw affected areas—streamlining the editing process and giving more control over their compositions..
             </p>
           </div>
 
@@ -193,7 +193,7 @@
   <!-- Handshake -->
   <section class="section">
     <div class="container is-max-desktop">
-      <img src="./static/images/thankful_handshake.png" alt="Banner Image" width="100%">
+      <img src="./static/images/INKi_intro.png" alt="Banner Image" width="100%">
     </div>
   </section>
 
@@ -202,13 +202,13 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-3">What can <span class="dnerf">SketchSeg</span> do?</h2>
+          <h2 class="title is-3">What can <span class="dnerf">INKi</span> do?</h2>
           <div class="content has-text-justified mt-4">
-            <p> We present instance segmentation results achieved by <span class="dnerf">SketchSeg</span> across various stroke styles, demonstrating its robustness in handing varied styles and complexity. </p>
+            <p> We present instance segmentation results achieved by <span class="dnerf">INKi</span> across various stroke styles, demonstrating its robustness in handing varied styles and complexity. </p>
           </div>
 
           <!-- Our Sketches -->
-          <h2 class="title is-4"><span class="dnerf">SketchSeg</span> on Real-World Sketches</h2>
+          <h2 class="title is-4"><span class="dnerf">INKi</span> on Real-World Sketches</h2>
           <div id="results-carousel" class="carousel results-carousel" data-slides-to-show="1">
             <div class="carousel-slide">
               <img src="static/images/results/real_world/result_0.png" alt="results 0">
@@ -231,7 +231,7 @@
           <hr class="my-4" />
 
           <!-- Dataset Sketches -->
-          <h2 class="title is-4"><span class="dnerf">SketchSeg</span> on Dataset Sketches</h2>
+          <h2 class="title is-4"><span class="dnerf">INKi</span> on Dataset Sketches</h2>
           <div id="results-carousel" class="carousel results-carousel" data-slides-to-show="1">
             <div class="carousel-slide">
               <img src="static/images/results/dataset/result_0.png" alt="results 0">
@@ -257,14 +257,14 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-3">How does <span class="dnerf">SketchSeg</span> work?</h2>
+          <h2 class="title is-3">How does <span class="dnerf">INKi</span> work?</h2>
           <div class="content has-text-justified mt-4">
             <p class="font-bold">✴️ Given a raster sketch, our goal is to produce a segmentation map such that pixels belonging to the same object instance are grouped together. Based on the segmentation map, we also divide the sketch into layers, sorted by depth. </p>
           </div>
 
           <!-- main methods -->
           <h2 class="title is-4">Overall pipeline</h2>
-          <img src="./static/images/methods.png" alt="Methods Figure" />
+          <img src="./static/images/methods_figure.png" alt="Methods Figure" />
           <div class="content has-text-justified mt-4">
             <p> Given an input sketch image, our framework first detects bounding boxes using a customized Grounding DINO to obtain region proposals, and then perform segmentation with SAM models. The localization and segmentation are refined by incorporating the depth features. The result segmentation can be viewed as a layered decomposition of object components in the original sketch.
             </p>
