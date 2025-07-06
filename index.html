@@ -300,7 +300,7 @@
           <h2 class="title is-4">Sketch-aware object detection</h2>
           <div class="content has-text-justified mt-4">
             <p><b>🟥 Challenge: </b> Grounding DINO is an object detection model which outputs bounding boxes for recognized object instances, based on a given text prompt describing the scene. While effective for natural images, the model in its original configuration demonstrates limited generalization to sketches. </p>
-            <p><b>✅ Our Solution: </b>We fine-tune a Grounding DINO model specifically for sketches. We train the model to distinguish between instances based on their visual characteristics, aiming to push the model to rely on Gestalt properties such as closure, continuity, and emergence, to group together strokes forming a single object. <b> ⭐ Our fine-tuning technique proves highly effective, achieving a substantial improvement in GroundingDINO's detection performance on sketches, with Average Precision increasing from 24% to 75%. </b> Please refer to the paper for technical details and numerical evaluations.
+            <p><b>✅ Our Solution: </b>We fine-tune a Grounding DINO model specifically for sketches. We train the model to distinguish between instances based on their visual characteristics, aiming to push the model to rely on Gestalt properties such as closure, continuity, and emergence, to group together strokes forming a single object. <b> ⭐ Our fine-tuning technique proves highly effective, achieving a substantial improvement in GroundingDINO's detection performance on sketches, with Average Precision increasing from 26% to 74%. </b> Please refer to the paper for technical details and numerical evaluations.
             </p>
           </div>
           <!-- object detection -->
@@ -340,10 +340,6 @@
             <p class="font-bold"> ✴️ To evaluate our performance across a diverse set of sketches, we construct a synthetic annotated scene-sketch dataset. This dataset focuses on three key axes of variation, designed to extend existing datasets: (1) drawing style, (2) stroke style, and (3) object categories. </p>
           </div>
           <img src="./static/images/dataset_variations.png" alt="Dataset Variations Figure" />
-
-          <div class="content has-text-justified mt-4 bg-orange-100 p-4 rounded-md">
-            <p class="font-bold text-orange-500"> 🚧 Dataset will be released shortly... stay tuned! We show some example sketches below. 👇 </p>
-          </div>
 
           <div id="results-carousel" class="carousel results-carousel" data-slides-to-show="1">
             <div class="carousel-slide">
